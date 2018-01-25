@@ -15,5 +15,37 @@
     <h3>До 20 лет: <?=$result_total['age_20'] . ', ' , number_format($result_total['age_20']*100/$result_total['count'], 1) . '% опрошенных.'; ?></h3>
     <h3>От 20 до 30 лет: <?=$result_total['age_2030'] . ', ' , number_format($result_total['age_2030']*100/$result_total['count'], 1) . '% опрошенных.'; ?></h3>
     <h3>После 30 лет: <?=$result_total['age_30'] . ', ' , number_format($result_total['age_30']*100/$result_total['count'], 1) . '% опрошенных.'; ?></h3>
+
+    <div class="bar-main-container emerald">
+        <div class="txt"> Возраст до 20 лет</div>
+        <div class="wrap">
+            <div class="bar-percentage"><?=number_format($result_total['age_20']*100/$result_total['count']); ?>%</div>
+            <div class="bar-container">
+                <div class="bar" style="width: <?=number_format($result_total['age_20']*100/$result_total['count']); ?>%"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bar-main-container yellow">
+        <div class="txt"> Возраст от 20 до 30 лет</div>
+        <div class="wrap">
+            <div class="bar-percentage"><?=number_format($result_total['age_2030']*100/$result_total['count']); ?>%</div>
+            <div class="bar-container">
+                <div class="bar" style="width: <?=number_format($result_total['age_2030']*100/$result_total['count']); ?>%"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bar-main-container red">
+        <div class="txt"> Возраст свыше 30 лет</div>
+        <div class="wrap">
+            <div class="bar-percentage"><?=number_format($result_total['age_30']*100/$result_total['count']); ?>%</div>
+            <div class="bar-container">
+                <div class="bar" style="width: <?=number_format($result_total['age_30']*100/$result_total['count']); ?>%"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 </body>
 </html>
