@@ -22,3 +22,10 @@ function add($link, int $one)
         return false;
     }
 }
+
+function getResult($link)
+{
+    $query = "SELECT # FROM interview";
+    $result = mysqli_query($link, $query);
+
+}
