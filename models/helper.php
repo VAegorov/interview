@@ -25,7 +25,21 @@ function add($link, int $one)
 
 function getResult($link)
 {
-    $query = "SELECT # FROM interview";
+    $result_total = [];
+    $query = "SELECT COUNT(id) AS count FROM interview";
     $result = mysqli_query($link, $query);
+    $result_total['count'] = mysqli_fetch_assoc($result)['count'];
 
+    $query = "SELECT COUNT(id) AS count FROM interview WHERE result=20";
+    $result = mysqli_query($link, $query);
+    $result_total['age_20'] = mysqli_fetch_assoc($result)['count'];
+
+    $query = "SELECT COUNT(id) AS count FROM interview WHERE result=2030";
+    $result = mysqli_query($link, $query);
+    $result_total['age_2030'] = mysqli_fetch_assoc($result)['count'];
+
+    $query = "SELECT COUNT(id) AS count FROM interview WHERE result=30";
+    $result = mysqli_query($link, $query);
+    $result_total['age_30'] = mysqli_fetch_assoc($result)['count'];
+    return $result_total;
 }
