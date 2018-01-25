@@ -12,8 +12,8 @@
     <p><a href="index.php">На главную</a></p>
     <h1>Результаты опроса</h1>
     <h3>Всего проголосовало: <?=$result_total['count']; ?></h3>
-    <h3>До 20 лет: <?=$result_total['age_20']; ?></h3>
-    <h3>От 20 до 30 лет: <?=$result_total['age_2030']; ?></h3>
-    <h3>После 30 лет: <?=$result_total['age_30']; ?></h3>
+    <h3>До 20 лет: <?=$result_total['age_20'] . ', ' , number_format($result_total['age_20']*100/$result_total['count'], 1) . '% опрошенных.'; ?></h3>
+    <h3>От 20 до 30 лет: <?=$result_total['age_2030'] . ', ' , number_format($result_total['age_2030']*100/$result_total['count'], 1) . '% опрошенных.'; ?></h3>
+    <h3>После 30 лет: <?=$result_total['age_30'] . ', ' , number_format($result_total['age_30']*100/$result_total['count'], 1) . '% опрошенных.'; ?></h3>
 </body>
 </html>
